@@ -1,0 +1,28 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Título</th>
+      <th scope="col">Plataforma</th>
+      <th scope="col">Año de lanzamiento</th>
+      <th scope="col">Duración (horas)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let curso of cursos">
+      <tr>
+        <th scope="row">{{ curso.id }}</th>
+        <td>{{ curso.title }}</td>
+        <td>{{ curso.platform }}</td>
+        <td>{{ curso.launch_year }}</td>
+        <td>{{ curso.duration_hours }}</td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
+<p>Los siguientes cursos ofrecen certificado:</p>
+<ul>
+  <ng-container *ngFor="let curso of cursos">
+    <li *ngIf="curso.offers_certificate">{{ curso.title }}</li>
+  </ng-container>
+</ul>

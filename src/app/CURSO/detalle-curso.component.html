@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;">
+    <img [src]="CursoDetail.image" class="card-img-top" alt="Imagen del curso">
+    <div class="card-body">
+      <h5 class="card-title">{{ CursoDetail.title }}</h5>
+      <p class="card-text">{{ CursoDetail.description }}</p>
+      <p *ngIf="curso.offers_certificate" class="card-text">Ofrece certificado</p>
+      <p *ngIf="!curso.offers_certificate" class="card-text">No ofrece certificado</p>
+    </div>
+  </div>
